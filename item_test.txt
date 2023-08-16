@@ -1,0 +1,35 @@
+Item Class: Body Armours
+Rarity: Rare
+Agony Veil
+Desert Brigandine
+--------
+Quality: +20% (augmented)
+Armour: 556 (augmented)
+Evasion Rating: 552 (augmented)
+--------
+Requirements:
+Level: 66
+Str: 96
+Dex: 142
+Int: 58
+--------
+Sockets: B-G-R-G-G G 
+--------
+Item Level: 75
+--------
+{ Searing Exarch Implicit Modifier (Lesser) }
+Gain a Power Charge every 15 seconds (implicit)
+{ Eater of Worlds Implicit Modifier (Lesser) — Defences, Armour }
+18(17-18)% increased Armour (implicit)
+--------
+{ Prefix Modifier "Powerful" (Tier: 5) — Defences, Armour, Evasion }
++72(49-85) to Armour
++69(49-85) to Evasion Rating
+{ Prefix Modifier "of the Fox" (Tier: 5) — Defences, Armour, Evasion }
++72(49-85) to Armour
++69(49-85) to Evasion Rating
+{ Prefix Modifier "of the Prodigy" (Tier: 5) — Defences, Armour, Evasion }
++72(49-85) to Armour
++69(49-85) to Evasion Rating
+Searing Exarch Item
+Eater of Worlds Item

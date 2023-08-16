@@ -1,0 +1,37 @@
+Item Class: Body Armours
+Rarity: Rare
+Agony Veil
+Desert Brigandine
+--------
+Quality: +20% (augmented)
+Armour: 556 (augmented)
+Evasion Rating: 552 (augmented)
+--------
+Requirements:
+Level: 66
+Str: 96
+Dex: 142
+Int: 58
+--------
+Sockets: B-G-R-G-G G 
+--------
+Item Level: 75
+--------
+{ Searing Exarch Implicit Modifier (Lesser) }
+Gain a Power Charge every 15 seconds (implicit)
+{ Eater of Worlds Implicit Modifier (Lesser) — Defences, Armour }
+18(17-18)% increased Armour (implicit)
+--------
+{ Prefix Modifier "Durable" (Tier: 5) — Defences, Armour, Evasion }
++72(49-85) to Armour
++69(49-85) to Evasion Rating
+{ Prefix Modifier "Thorny" (Tier: 4) — Damage, Physical }
+Reflects 2(1-4) Physical Damage to Melee Attackers
+{ Prefix Modifier "Virile" (Tier: 6) — Life }
++72(70-79) to maximum Life
+{ Suffix Modifier "of the Lightning" (Tier: 2) — Elemental, Lightning, Resistance }
++44(42-45)% to Lightning Resistance
+{ Master Crafted Suffix Modifier "of Craft" (Rank: 3) — Elemental, Fire, Cold, Resistance }
++18(17-20)% to Fire and Cold Resistances (crafted)
+Searing Exarch Item
+Eater of Worlds Item
