@@ -2,6 +2,7 @@
 import pyautogui
 import tkinter as tk
 
+transX, transY, altX, altY, augX, augY, regX, regY, scourX, scourY, exaltX, exaltY, showcaseX, showcaseY = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 clipboardData = ''
 modArray = ["deez"]
 modArray.append("Powerful")
@@ -20,10 +21,10 @@ def transmute():
     print(f'Transmuted')
     #pick up transmute, 100,100 will need to change to the location of wherever transmutes are 
     #in your resolution
-    pyautogui.moveTo(71,369,duration=0.17)
+    pyautogui.moveTo(transX,transY,duration=0.17)
     pyautogui.rightClick()
     pyautogui.PAUSE
-    pyautogui.moveTo(423,614,duration=0.17)
+    pyautogui.moveTo(showcaseX,showcaseY,duration=0.17)
     pyautogui.leftClick()
     #copy to clipboard and see if the item somehow hit what we want
     pyautogui.hotkey('alt','ctrl','c')
@@ -43,13 +44,13 @@ def transmute():
 def alteration():
     global alterationCount
     #pick up alt
-    pyautogui.moveTo(153,351, duration=0.17)
+    pyautogui.moveTo(altX,altY, duration=0.17)
     pyautogui.rightClick()
     while (alterationCount > 0):
         print(f'Alted')
         #use alt
         pyautogui.keyDown('shift')
-        pyautogui.moveTo(423,614,duration=0.17)
+        pyautogui.moveTo(showcaseX,showcaseY,duration=0.17)
         pyautogui.leftClick()
         alterationCount = alterationCount - 1
         #grab item data
@@ -70,19 +71,21 @@ def alteration():
                 if(aug == 1):
                     #augment
                     print(f'augmented')
-                    pyautogui.moveTo(298,435,duration=0.17)
+                    pyautogui.moveTo(augX,augY,duration=0.17)
                     pyautogui.rightClick()
-                    pyautogui.moveTo(423,614,duration=0.17)
+                    pyautogui.moveTo(showcaseX,showcaseY,duration=0.17)
                     pyautogui.leftClick()
                     #check if it needs to be regaled or keep alting
                     pyautogui.hotkey('alt','ctrl','c')
                     clipboardData = clippy.clipboard_get().split()
                     for str in clipboardData:
+                        str = str.strip('\"')
                         if(modArray.count(str) and str != foundMod):
+                            aug = 0
                             regal()
                     aug = 0
                     #pick up alt
-                    pyautogui.moveTo(153,351, duration=0.17)
+                    pyautogui.moveTo(altX,altY, duration=0.17)
                     pyautogui.rightClick()
     pyautogui.keyUp('shift')
     print(f'Reached alteration count, exiting')
@@ -95,11 +98,11 @@ def alteration():
 def regal():
     print(f'Regaled')
     #grab regal
-    pyautogui.moveTo(575,351,duration=0.17)
+    pyautogui.moveTo(regX,regY,duration=0.17)
     pyautogui.rightClick()
     pyautogui.PAUSE
     #use regal
-    pyautogui.moveTo(423,614,duration=0.17)
+    pyautogui.moveTo(showcaseX,showcaseY,duration=0.17)
     pyautogui.leftClick()
     pyautogui.PAUSE
     #check mods
@@ -120,11 +123,11 @@ def regal():
 def scour():
     print(f'Scoured')
     #pick up scour
-    pyautogui.moveTo(569,669,duration=0.17)
+    pyautogui.moveTo(scourX,scourY,duration=0.17)
     pyautogui.rightClick()
     pyautogui.PAUSE
     #use scour
-    pyautogui.moveTo(423,614,duration=0.17)
+    pyautogui.moveTo(showcaseX,showcaseY,duration=0.17)
     pyautogui.leftClick()
     pyautogui.PAUSE
     #back to transmuting
@@ -134,11 +137,11 @@ def scour():
 def exalt():
     print(f'Exalted')
     #pick up exalt
-    pyautogui.moveTo(403,352,duration=0.17)
+    pyautogui.moveTo(exaltX,exaltY,duration=0.17)
     pyautogui.rightClick()
     pyautogui.PAUSE
     #use exalt
-    pyautogui.moveTo(423,614,duration=0.17)
+    pyautogui.moveTo(showcaseX,showcaseY,duration=0.17)
     pyautogui.leftClick()
     pyautogui.PAUSE
     #at this point user will manually check what was slammed and get asked if they want to scour or not
@@ -151,6 +154,27 @@ def exalt():
             print(f'Exiting')
             exit()
 
+input(f'Place cursor over transmute then hit enter')
+transX = pyautogui.position().x
+transY = pyautogui.position().y
+input(f'Place cursor over alteration then hit enter')
+altX = pyautogui.position().x
+altY = pyautogui.position().y
+input(f'Place cursor over augment then hit enter')
+augX = pyautogui.position().x
+augY = pyautogui.position().y
+input(f'Place cursor over regal then hit enter')
+regX = pyautogui.position().x
+regY = pyautogui.position().y
+input(f'Place cursor over scour then hit enter')
+scourX = pyautogui.position().x
+scourY = pyautogui.position().y
+input(f'Place cursor over exalt then hit enter')
+exaltX = pyautogui.position().x
+exaltY = pyautogui.position().y
+input(f'Place cursor over showcase then hit enter')
+showcaseX = pyautogui.position().x
+showcaseY = pyautogui.position().y
 print('Please have stash open on currency tab with item in the showcase slot')
 altInput = input('How many alterations would you like to use? ')
 alterationCount = int(altInput)
