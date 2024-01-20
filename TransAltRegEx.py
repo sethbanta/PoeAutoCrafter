@@ -6,9 +6,9 @@ transX, transY, altX, altY, augX, augY, regX, regY, scourX, scourY, exaltX, exal
 clipboardData = ''
 modArray = ["deez"]
 modArray.append("Powerful")
-modArray.append("Glowing")
-modArray.append("Meteor")
-modArray.append("Prodigy")
+modArray.append("Exile")
+modArray.append("Expulsion")
+#modArray.append("Prodigy")
 
 
 alterationCount = 0
@@ -83,10 +83,12 @@ def alteration():
                         if(modArray.count(str) and str != foundMod):
                             aug = 0
                             regal()
+                            #exit()
                     aug = 0
                     #pick up alt
                     pyautogui.moveTo(altX,altY, duration=0.17)
                     pyautogui.rightClick()
+                    break
     pyautogui.keyUp('shift')
     print(f'Reached alteration count, exiting')
     exit()
