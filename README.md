@@ -2,4 +2,4 @@ Python script meant to automate crafting in Path of Exile. Currently is made to 
 
 To change what mods you want to search for just modify lines 8-11 (or add more lines) to have the keyword of the mod you want i.e. Powerful, Exile, Expulsion etc...
 
-After setting mods that you want, run the program, follow the prompts, and let it cook
+After setting mods that you want, run TransAltRegEx.py, follow the prompts, and let it cook
