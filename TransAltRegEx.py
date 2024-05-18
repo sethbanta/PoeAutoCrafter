@@ -5,10 +5,6 @@ import tkinter as tk
 transX, transY, altX, altY, augX, augY, regX, regY, scourX, scourY, exaltX, exaltY, showcaseX, showcaseY = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 clipboardData = ''
 modArray = ["deez"]
-modArray.append("Powerful")
-modArray.append("Exile")
-modArray.append("Expulsion")
-#modArray.append("Prodigy")
 
 
 alterationCount = 0
@@ -156,6 +152,14 @@ def exalt():
             print(f'Exiting')
             exit()
 
+go = True
+while(go):
+    mod = input(f'Please enter a mod you are looking for i.e. "Powerful" or "Exile" or "Expulsion": ')
+    modArray.append(mod)
+    more = input(f'Would you like to add another mod? (y/n) ')
+    match more:
+        case "n":
+            go = False
 input(f'Place cursor over transmute then hit enter')
 transX = pyautogui.position().x
 transY = pyautogui.position().y
