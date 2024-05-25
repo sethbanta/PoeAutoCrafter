@@ -30,10 +30,16 @@ def transmute():
     #split or truncate so that we find the mods on the item
     #search in an array if the mods that are on the item are what we want
     #if its what we want move to regal, if its not, alt
+    mods = 0
+    foundMod = ''
     for str in deez:
         str = str.strip('\"') 
         if(modArray.count(str)):
-            regal()
+            mods += 1
+            foundMod = str
+            for str in deez:
+                if(modArray.count(str) and str != foundMod):
+                    regal()
     alteration()
 
 #Function used to perform alting an item
