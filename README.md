@@ -2,8 +2,8 @@ Python script meant to automate crafting in Path of Exile. Currently is made to 
 
 If you are having trouble running this you might need to install Pyautogui: https://pyautogui.readthedocs.io/en/latest/install.html
 
-To change what mods you want to search for just modify lines 8-11 (or add more lines) to have the keyword of the mod you want i.e. Powerful, Exile, Expulsion etc...
+How to use:
 
-After setting mods that you want, run TransAltRegEx.py, follow the prompts, and let it cook.
+Run TransAltRegEx.py, follow the prompts, and let it cook.
 
 If you want to cancel the program, flick your cursor to the top left of the screen. This will activate a fail safe that terminates the entire program.
